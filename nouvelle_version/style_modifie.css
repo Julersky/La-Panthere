@@ -91,7 +91,7 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url("img/texture-paper.png");
+    /* background: url("img/texture-paper.png"); */
     background-size: 280px 280px;
 }
 
@@ -133,7 +133,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: #232323;
 }
 
 .d-bloc .a-btn:hover,
@@ -195,7 +195,7 @@ a:hover {
 
 .d-bloc .panel,
 .l-bloc {
-    color: rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .66); /*MODIFICATION DU CONTRASTE*/
 }
 
 .d-bloc .panel button:hover,
@@ -651,7 +651,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: #575757;
 }
 
 .container {
@@ -677,7 +677,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .tight-width-whitespace {
@@ -701,19 +701,25 @@ p {
 
 .social {
     max-width: 400px;
-    margin: auto auto auto auto;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    margin: 0px 10px;
 }
 
 h2 {
     font-size: 22px;
     line-height: 1.4em;
+    letter-spacing: 0px;
+    font-weight: 500;
 }
 
 h3 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #333333!important;
+    color: #333333;
 }
 
 .med-width-whitespace {
@@ -727,7 +733,7 @@ h1 {
 }
 
 h4 {
-    color: #333333!important;
+    color: #333333;
 }
 
 .icons {
@@ -736,7 +742,7 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF!important;
+    color: #FFFFFF;
 }
 
 .portfolio-thumb {
@@ -766,9 +772,9 @@ h4 {
     background-color: #FFFFFF;
 }
 
-.bgc-dark-slate-blue {
+/* .bgc-dark-slate-blue {
     background-color: #364577;
-}
+} */
 
 .bgc-atomic-tangerine {
     background-color: #F3976C;
@@ -780,7 +786,7 @@ h4 {
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: #232323!important;
 }
 
 .btn-atomic-tangerine:hover {
@@ -823,7 +829,10 @@ h4 {
 
 .bg-presentation {
     background-image: url("img/image-de-presentation.bmp");
+
 }
+
+
 
 @media (max-width: 1024px) {
     .bloc {
@@ -902,8 +911,8 @@ h4 {
     h6,
     p,
     #disqus_thread {
-        padding-left: 10px!important;
-        padding-right: 10px!important;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .b-parallax {
         background-attachment: scroll;
@@ -1028,15 +1037,122 @@ h4 {
     }
 }
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     .bloc {
         padding-left: 0;
         padding-right: 0;
     }
+
 }
 
 @media (max-width: 767px) {
     .bloc-mob-center-text {
         text-align: center;
+    }
+}
+
+
+/* AJOUT DE STYLE*/
+
+.rs{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom:20px ;
+}
+.social:hover{
+    color: white;
+}
+
+
+.text-center .social{
+    color:#232323;
+
+}
+
+
+#titre_partenaire{
+    color:#232323;
+    font-size: 14px;
+    text-transform: none;
+    margin: 0;
+}
+.container_partenaire{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+.partenaire{
+    display: flex;
+    width: fit-content;
+    flex-wrap:wrap;
+    padding: 0;
+    margin: 0;
+}
+.partenaires{
+    list-style: none;
+    margin: 0px 5px;
+
+    
+}
+.partenaires a{
+    color: #232323;
+    font-size: 12px;
+}
+#p_agence{
+    color:#232323;
+}
+#map_container{
+    display: flex;
+    justify-content: center;
+}
+#map{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+}
+#tab_actif{
+    border-bottom: 2px solid #F3976C;
+}
+#citation{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+}
+#citation_auteur{
+    font-size: 20px;
+    color: #747272;
+}
+
+@media only screen and (max-width: 450px){
+    .container_partenaire{
+        flex-direction:column;
+        margin: 0;
+    }
+    #titre_partenaire{
+        padding: 0;
+    }
+    .partenaire{
+        flex-direction: column;
+        padding-inline-start: 15px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .img-responsive{
+        min-width: 100%;
+    }
+    #map{
+        width: 90%;
+        align-self: center;
+    }
+    #map_container{
+        margin-top: 25px;
     }
 }
